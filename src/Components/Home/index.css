@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.mainDiv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.brandName {
+  font-size: x-large;
+  color: black;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 15%;
+  padding: 0px 50px;
+}
+
+.headerBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.headerBtn {
+  background-color: white;
+  font-size: large;
+  border-radius: 50px;
+  width: 90px;
+  height: 40px;
+  border: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5%;
+}
+
+.headerBtn:hover {
+  background-color: #7c75f9;
+  color: white;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: black;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-bet; */
+  flex-direction: row;
+  margin: 20px;
+}
+
+.mainBtn {
+  background-color: #7c75f9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-size: medium;
+}
+
+.mainBtn:hover {
+  color: #7c75f9;
+  border: #7c75f9;
+  background-color: white;
+  cursor: pointer;
+}

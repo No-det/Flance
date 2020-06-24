@@ -9,36 +9,29 @@ const Home = () => {
       <div className="header">
         <div className="brandName">FLANCE</div>
         <div className="headerBtnContainer">
-          <Button type="default" className="headerBtn">
+          <div type="default" className="headerBtn">
             Home
-          </Button>
-          <Button type="default" className="headerBtn">
+          </div>
+          <div type="default" className="headerBtn">
             Services
-          </Button>
-          <Button type="default" className="headerBtn">
+          </div>
+          <div type="default" className="headerBtn">
             About
-          </Button>
-          <Button type="default" className="headerBtn">
+          </div>
+          <div type="default" className="headerBtn loginBtn">
             Login
-          </Button>
+          </div>
         </div>
       </div>
       <div className="content">
-        <div>
-          <div style={{ fontSize: "xx-large", fontWeight: "bolder" }}>
+        <div className="landingLeft">
+          <div className="taglinePrimary">
             <h1>Hire the best in Class</h1>
           </div>
-          <div style={{ fontSize: "medium", fontWeight: "bolder" }}>
+          <div className="taglineSecondary">
             <h2>Turn your ideas into reality</h2>
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              flexDirection: "row",
-            }}
-          >
+          <div className="landingMainBtn">
             <Button type="default" className="mainBtn">
               Hire a freelancer
             </Button>
@@ -47,7 +40,7 @@ const Home = () => {
             </Button>
           </div>
         </div>
-        <div style={{ marginLeft: 200 }}>
+        <div className="landingRight">
           <img src={Image} alt="svgImage" />
         </div>
       </div>

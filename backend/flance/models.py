@@ -45,12 +45,12 @@ LEVEL = [
 class Freelancer(User):
     ''' Model of Freelancer '''
 
-    languages = models.CharField(max_length=50, choices=LANGUAGES)
-    fields = models.CharField(max_length=50, choices=FIELDS)
-    specialization = models.CharField(max_length=50, choices=SPECIALIZATION)
-    level = models.CharField(max_length=20, choices=LEVEL)
-    salary = models.IntegerField(validators=[max_value(1000), min_value(250)], default=250)
-    github = models.URLField(max_length=100, default='')
+    languages = models.CharField('Languages', max_length=50, choices=LANGUAGES)
+    fields = models.CharField('Fields', max_length=50, choices=FIELDS)
+    specialization = models.CharField('Specialization', max_length=50, choices=SPECIALIZATION)
+    level = models.CharField('Level', max_length=20, choices=LEVEL)
+    salary = models.IntegerField('Salary', validators=[max_value(1000), min_value(250)], default=250)
+    github = models.URLField('Github Pofile', max_length=100, default='')
 
     class Meta:
         verbose_name = 'Freelancer'
@@ -59,8 +59,8 @@ class Freelancer(User):
 
 class Employer(User):
     ''' Model of Employer '''
-    company = models.CharField(max_length=100)
-    company_website = models.URLField(max_length=500)
+    company = models.CharField('Company', max_length=100)
+    company_website = models.URLField('Website', max_length=500)
 
     class Meta:
         verbose_name = 'Employer'
@@ -78,11 +78,11 @@ class Job(models.Model):
 class Employee(models.Model):
     ''' Model of the employee for a job '''
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
-    languages = models.CharField(max_length=50, choices=LANGUAGES)
-    fields = models.CharField(max_length=50, choices=FIELDS)
-    specialization = models.CharField(max_length=50, choices=SPECIALIZATION)
-    level = models.CharField(max_length=20, choices=LEVEL)
-    salary = models.IntegerField(validators=[max_value(1000), min_value(250)])
+    languages = models.CharField('Languages', max_length=50, choices=LANGUAGES)
+    fields = models.CharField('Fields', max_length=50, choices=FIELDS)
+    specialization = models.CharField('Specialization', max_length=50, choices=SPECIALIZATION)
+    level = models.CharField('Level', max_length=20, choices=LEVEL)
+    salary = models.IntegerField('Salary', validators=[max_value(1000), min_value(250)], default=250)
 
     class Meta:
         verbose_name = 'Employee'

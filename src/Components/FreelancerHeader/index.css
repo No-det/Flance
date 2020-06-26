@@ -1,0 +1,94 @@
+ul {
+  margin: 0;
+}
+ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  min-height: 12vh;
+  padding: 10px 20px;
+}
+.logo {
+  display: flex;
+  flex: 2 1;
+}
+.logo h1 {
+  font-size: 24px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  flex: 1 2;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #222;
+}
+nav ul li i {
+  padding: 10px;
+}
+.displayPicture {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 10px;
+}
+
+.bottomNav {
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 100px;
+  background-color: #7c75f9;
+}
+.bottomNav li {
+  font-weight: 500;
+  color: white;
+}
+.navLeft {
+  display: flex;
+  flex: 1 1;
+  height: 100%;
+  align-items: center;
+}
+.navLeft ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navRight {
+  display: flex;
+  flex: 1 1;
+  justify-content: flex-end;
+  padding: 0 150px;
+}
+.navRight ul li i {
+  padding: 0 10px;
+}

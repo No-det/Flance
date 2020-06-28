@@ -50,6 +50,9 @@ nav ul li {
 nav ul li i {
   padding: 10px;
 }
+nav ul li p {
+  margin: 0;
+}
 .displayPicture {
   height: 30px;
   width: 30px;
@@ -93,9 +96,78 @@ nav ul li i {
 .navRight ul li i {
   padding: 0 10px;
 }
-
-@media (max-width: 1200px) {
+.hamburger {
+  width: 30px;
+  height: 30px;
+}
+.hamburger i {
+  color: #222;
+}
+.mobileNavWrapper {
+  display: none;
+}
+.mobileNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(247, 247, 247);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 9px;
+}
+.mobileNav i {
+  color: #222;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+.mobileNav ul li {
+  border-bottom: 1px solid gray;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
+  .logo,
+  .navLeft,
+  .navRight,
+  nav {
+    flex: 1 1;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  .mobileNavWrapper {
+    display: block;
+  }
+  .mobileNav ul li {
+    display: flex;
+    justify-content: flex-start;
+    height: 40px;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .mobileNav ul li p {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .bottomNav {
+    display: flex;
+    flex-direction: column;
+  }
+  .navLeft,
+  .navRight {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 0;
+    margin: 0;
+  }
+  .navLeft ul li {
+    padding: 0 20px;
+  }
 }

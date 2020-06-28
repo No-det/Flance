@@ -19,7 +19,10 @@ const FreelancerHeader = () => {
               <i class="fas fa-bell"></i>
               Notification
             </li>
-            <li>Messages</li>
+            <li>
+              <i class="fas fa-comment-alt"></i>
+              Messages
+            </li>
             <li id="Profiledropdown">
               <div className="displayPicture"></div>
               NAME
@@ -33,6 +36,7 @@ const FreelancerHeader = () => {
           <ul>
             <li>Projects</li>
             <li>Dashboard</li>
+            <li>Post a Project</li>
           </ul>
         </div>
         <div className="navRight">

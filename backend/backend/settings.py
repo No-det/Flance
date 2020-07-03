@@ -1,8 +1,11 @@
 import os
 
+AUTH_USER_MODEL = 'flance.User'
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
+AUTH_USER_MODEL = 'flance.User'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '+9pfe+xoczelrr96f@9y&gryjnbdny5t^$cg!425tu1#+g*jn!'

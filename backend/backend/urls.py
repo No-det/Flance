@@ -10,7 +10,7 @@ router.register('employee', api_views.EmployeeView, 'employee')
 router.register('job', api_views.JobView, 'job')
 
 urlpatterns = [
-    path('', include('flance.urls')),
-    path('api/', include(router.urls)),
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
+    path('api/', include('flance.urls')),
+    path('apiViews/', include(router.urls)),
 ]

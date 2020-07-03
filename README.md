@@ -1,7 +1,7 @@
 ## FLANCE
 
-**Hire the best form the class**
-A website for Employers to hire Freelancers and for Freelancers to find Jobs.
+**Hire the best form the class** <br/>
+A website for Employers to hire Freelancers and for Freelancers to find Jobs. <br/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
 from .serializers import (
-    FreelancerSerializer, EmployerSerializer,
+    FreelancerSerializer, EmployerSerializer, ProjectSerializer,
     FreelancerProfileSerializer, EmployerProfileSerializer)
 
 @api_view(['POST', 'GET'])
@@ -57,7 +57,21 @@ def employer_profile(request):
     serializer = EmployerProfileSerializer()
     return Response(serializer, status=status.HTTP_200_OK)
 
-            
+
+@api_view(['POST', 'GET'])
+def project_post(request):
+    if request.method == 'POST':
+        serializer = ProjectSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.creator = request.user
+            serializer.save()
+            return Response(status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    serializer = ProjectSerializer()
+    return Response(serializer, status=status.HTTP_200_OK)
+
+
 def index(request):
     text = '<br><br><center><h1>FLANCE running</h1></center>'
     return HttpResponse(text)

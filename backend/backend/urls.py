@@ -6,11 +6,12 @@ from flance import api_views
 router = routers.DefaultRouter()
 router.register('freelancer', api_views.FreelancerView, 'freelancer')
 router.register('employer', api_views.EmployerView, 'employer')
+router.register('project', api_views.ProjectView, 'project')
 router.register('employee', api_views.EmployeeView, 'employee')
 router.register('job', api_views.JobView, 'job')
 
 urlpatterns = [
-    path('', admin.site.urls),
+    path('', admin.site.urls, name='admin'),
     path('api/', include('flance.urls')),
     path('apiViews/', include(router.urls)),
 ]

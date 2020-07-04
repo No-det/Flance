@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Freelancer, Employer, User
-from .models import Employee, Job
+from .models import Project, Employee, Job
 
 class FreelancerSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(style={'input_type': 'password'}, write_only=True)
@@ -60,6 +60,11 @@ class EmployerProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employer
         fields = ('user', 'name', 'comapany', 'website')
+
+class ProjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Project
+        fields = ('name', 'tech', 'desc', 'link')
 
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
